@@ -102,7 +102,7 @@ public class EditPG extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel4);
-        jPanel4.setBounds(0, 0, 1110, 113);
+        jPanel4.setBounds(0, 0, 1110, 111);
 
         jPanel5.setBackground(new java.awt.Color(44, 62, 80));
 

@@ -258,7 +258,7 @@ public class AddPG extends javax.swing.JFrame {
             deposit = new Long (appartment_deposit);
             
             Statement statement=con.createStatement();
-            String query = "INSERT INTO apartment (apartment_name,address,apartment_type,deposit,proprietor_id) VALUES ('" +appartment_name+ "','" +appartment_address+ "','" +appartment_size+ "',"+deposit+","+p_id+")";
+            String query = "INSERT INTO apartment (apartment_name,address,type,deposit,propreitor_id) VALUES ('" +appartment_name+ "','" +appartment_address+ "','" +appartment_size+ "',"+deposit+","+p_id+")";
             int s=statement.executeUpdate(query);
             statement.close();
             con.close();

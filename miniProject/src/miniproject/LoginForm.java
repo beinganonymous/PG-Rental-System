@@ -47,7 +47,7 @@ public class LoginForm extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jRadioButtonProprietor = new javax.swing.JRadioButton();
+        jRadioButtonpropreitor = new javax.swing.JRadioButton();
         jRadioButtonCustomer = new javax.swing.JRadioButton();
         jTextFieldEmailAddress = new javax.swing.JTextField();
         jPasswordField = new javax.swing.JPasswordField();
@@ -80,10 +80,10 @@ public class LoginForm extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(236, 241, 240));
         jLabel3.setText("PASSWORD");
 
-        jRadioButtonProprietor.setBackground(new java.awt.Color(44, 62, 80));
-        buttonGroup1.add(jRadioButtonProprietor);
-        jRadioButtonProprietor.setForeground(new java.awt.Color(255, 0, 0));
-        jRadioButtonProprietor.setText("Proprieter");
+        jRadioButtonpropreitor.setBackground(new java.awt.Color(44, 62, 80));
+        buttonGroup1.add(jRadioButtonpropreitor);
+        jRadioButtonpropreitor.setForeground(new java.awt.Color(255, 0, 0));
+        jRadioButtonpropreitor.setText("Proprieter");
 
         jRadioButtonCustomer.setBackground(new java.awt.Color(44, 62, 80));
         buttonGroup1.add(jRadioButtonCustomer);
@@ -139,7 +139,7 @@ public class LoginForm extends javax.swing.JFrame {
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jRadioButtonProprietor)
+                            .addComponent(jRadioButtonpropreitor)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -171,7 +171,7 @@ public class LoginForm extends javax.swing.JFrame {
                 .addGap(61, 61, 61)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButtonCustomer)
-                    .addComponent(jRadioButtonProprietor))
+                    .addComponent(jRadioButtonpropreitor))
                 .addGap(50, 50, 50)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldEmailAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -239,7 +239,7 @@ public class LoginForm extends javax.swing.JFrame {
             if (jRadioButtonCustomer.isSelected()) {
                 query = "Select CUSTOMER_ID,EMAIL,PASSWORD from customer where EMAIL=?";
             } else {
-                query = "Select PROPRIETOR_ID,EMAIL,PASSWORD from proprietor where EMAIL=?";
+                query = "Select PROPREITOR_ID,EMAIL,PASSWORD from propreitor where EMAIL=?";
             }
             PreparedStatement statement = con.prepareStatement(query);
             statement.setString(1, jTextFieldEmailAddress.getText());
@@ -248,7 +248,7 @@ public class LoginForm extends javax.swing.JFrame {
                 if(jRadioButtonCustomer.isSelected())
                     id=result.getString("CUSTOMER_ID");
                 else
-                    id=result.getString("PROPRIETOR_ID");
+                    id=result.getString("PROPREITOR_ID");
                 
                 String dbasePassword = result.getString("Password").toString().trim();
                 String enteredPassword = jPasswordField.getText().trim();
@@ -334,7 +334,7 @@ public class LoginForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPasswordField jPasswordField;
     private javax.swing.JRadioButton jRadioButtonCustomer;
-    private javax.swing.JRadioButton jRadioButtonProprietor;
+    private javax.swing.JRadioButton jRadioButtonpropreitor;
     private javax.swing.JTextField jTextFieldEmailAddress;
     // End of variables declaration//GEN-END:variables
 

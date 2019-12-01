@@ -149,7 +149,7 @@ public class EditProfile extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1080, 100);
+        jPanel1.setBounds(0, 0, 1080, 99);
 
         jPanel2.setBackground(new java.awt.Color(44, 62, 80));
 

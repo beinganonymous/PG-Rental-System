@@ -323,8 +323,8 @@ public class RegisterationForm extends javax.swing.JFrame {
                 int s = statement.executeUpdate(query);
                 statement.close();
             } else {
-                table = "PROPRIETOR";
-                query = "INSERT INTO PROPRIETOR (PROPRIETOR_NAME,PHONE,DATE_OF_BIRTH,EMAIL,PASSWORD,ADDRESS,AGE) VALUES ('" + fname + "'," + mobno + ",'" + bdate1 + "','" + emailid + "','" + password + "','" + city + "',18)";
+                table = "PROPREITOR";
+                query = "INSERT INTO PROPREITOR (PROPREITOR_NAME,PHONE,DATE_OF_BIRTH,EMAIL,PASSWORD,ADDRESS,AGE) VALUES ('" + fname + "'," + mobno + ",'" + bdate1 + "','" + emailid + "','" + password + "','" + city + "',18)";
                 Statement statement = con.createStatement();
                 int s = statement.executeUpdate(query);
                 statement.close();
@@ -343,12 +343,12 @@ public class RegisterationForm extends javax.swing.JFrame {
 
             } else {
 
-                String fetch = "SELECT * FROM PROPRIETOR WHERE email= ? ";
+                String fetch = "SELECT * FROM PROPREITOR WHERE email= ? ";
                 PreparedStatement statement = con.prepareStatement(fetch);
                 statement.setString(1, emailid);
                 ResultSet rs = statement.executeQuery();
                 if (rs.next()) {
-                    PGDetails p = new PGDetails(rs.getString("PROPRIETOR_ID"));
+                    PGDetails p = new PGDetails(rs.getString("PROPREITOR_ID"));
                     p.setVisible(true);
                 }
             }
