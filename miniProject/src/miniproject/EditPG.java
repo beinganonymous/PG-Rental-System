@@ -67,7 +67,7 @@ public class EditPG extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1110, 570));
         setMinimumSize(new java.awt.Dimension(1110, 570));
         getContentPane().setLayout(null);
